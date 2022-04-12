@@ -6,6 +6,7 @@ plugins {
     kotlin("jvm") version "1.3.31"
     kotlin("plugin.spring") version "1.3.31"
     jacoco
+    signing
 }
 
 group = "com.example"
@@ -80,4 +81,8 @@ tasks.withType<KotlinCompile> {
         freeCompilerArgs = listOf("-Xjsr305=strict")
         jvmTarget = "1.8"
     }
+}
+
+signing {
+    sign(configurations.archives.get())
 }
