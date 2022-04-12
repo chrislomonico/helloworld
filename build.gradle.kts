@@ -59,10 +59,10 @@ tasks.jacocoTestCoverageVerification {
         }
     }
     classDirectories.setFrom(
-            sourceSets.main.get().output.asFileTree.matching {
-                // exclude main()
-                exclude("com/example/helloworld/ApplicationKt.class")
-            }
+        sourceSets.main.get().output.asFileTree.matching {
+            // exclude main()
+            exclude("com/example/helloworld/ApplicationKt.class")
+        }
     )
 }
 
